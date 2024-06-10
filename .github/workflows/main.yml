@@ -37,7 +37,7 @@ jobs:
         run: dotnet restore "Imc/Imc.csproj"
 
       - name: Build
-        run: dotnet build -c Release --no-restore
+        run: dotnet build "Imc/Imc.csproj" -c Release --no-restore
 
       - name: Publish .NET
         run: dotnet publish Imc.csproj -c:Release -o docs --nologo
